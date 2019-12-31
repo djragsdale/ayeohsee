@@ -14,10 +14,17 @@ function createInjector(dependencies) {
       }
 
       // This would allow the method to instantiate the class
+      // This would not handle nested dependency injection
       // instance['set' + dependencyName](dependencies[dependencyName]);
 
       // Ideally the injector should instantiate the class, like this
-      instance['set' + dependencyName](new dependencies[dependencyName]());
+      // This would not inject constants or factory functions
+      var dependency = new dependencies[dependencyName]();
+      if (dependency.getDependencies) {
+        // This recursively handles nested dependencies
+        setterPrototypeInjector(dependency);
+      }
+      instance['set' + dependencyName](dependency);
     });
   }
 }
