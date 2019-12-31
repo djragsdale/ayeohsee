@@ -1,4 +1,10 @@
+var testHelper = require('./helpers/test');
+
+var runTests = testHelper.runTests;
+var cleanTests = testHelper.cleanTests;
+
 // Get tests
+// An exercise is simplicity. Why scan all your subdirectories for a pattern to find 4 files?
 var tests = [
   './angularjs/index.test.js',
   './beans/index.test.js',
@@ -7,22 +13,28 @@ var tests = [
 ];
 
 // Run them each in a giant try/catch
-var results = [];
+var fileResults = [];
 for (var i = 0; i < tests.length; i++) {
   try {
+    console.log('\nTesting ' + tests[i] + '\n');
     require(tests[i]);
-    results.push('success');
+    fileResults.push('success');
+
+    runTests();
   } catch (err) {
-    results.push('failure');
+    console.error('\nA fatal error occurred when running ' + tests[i], err);
+    fileResults.push('failure');
+  } finally {
+    cleanTests();
   }
 }
 
 // Report results
-var failureCount = results.filter(function (result) {
-  return results === 'failure';
+var failureCount = fileResults.filter(function (result) {
+  return result === 'failure';
 }).length;
 if (failureCount > 0) {
-  console.error(failureCount + ' fatal errors occurred.');
+  console.error(failureCount + ' fatal error(s) occurred.');
 } else {
   console.log('\n\nTESTS COMPLETE.');
 }
