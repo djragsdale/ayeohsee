@@ -1,0 +1,29 @@
+{
+  "name": "eyeohsee",
+  "version": "0.1.0",
+  "description": "zero-dependency dependency injection dependency",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "node runTests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djragsdale/eyeohsee.git"
+  },
+  "keywords": [
+    "di",
+    "ioc",
+    "dependency",
+    "injection",
+    "containers"
+  ],
+  "author": "David Ragsdale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djragsdale/eyeohsee/issues"
+  },
+  "homepage": "https://github.com/djragsdale/eyeohsee#readme"
+}

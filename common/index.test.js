@@ -1,0 +1,1 @@
+// Just make sure it's equivalent to the spread variant
