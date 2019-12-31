@@ -20,6 +20,13 @@ const { createInjector } = require('eyeohsee/setter-prototype');
 import { createInjector } from 'eyeohsee/setter-prototype';
 ```
 
+If using as a raw script, make sure to include common first. Injectors that handle instantiation rely on it for supporting browsers without spread syntax.
+
+```html
+<script src="/assets/vendor/eyeohsee/common/script.js">
+<script src="/assets/vendor/eyeohsee/beans/script.js">
+```
+
 ## Desired Features
 
 - Each container type fully tested

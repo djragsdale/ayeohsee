@@ -137,7 +137,7 @@ test('getContext nests dependencies when in proper order', function() {
   assert.equal(returnedValue, testConstant);
 });
 
-test('getContext nests dependencies when in improper order', function () {
+test('getContext errors when in improper order', function () {
   // Desired output context without injection
   var baseContext = {
     needsService: needsService,

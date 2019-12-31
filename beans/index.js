@@ -1,3 +1,5 @@
+var applyAndNew = require('../common').applyAndNew;
+
 function JsonApplicationContext(notBean) {
   this.instances = {};
   var self = this;

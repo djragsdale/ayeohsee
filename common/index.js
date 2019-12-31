@@ -9,3 +9,7 @@ function applyAndNew(constructor, args) {
   }
   return partial;
 }
+
+module.exports = {
+  applyAndNew: applyAndNew
+};

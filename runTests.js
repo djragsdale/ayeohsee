@@ -8,6 +8,7 @@ var cleanTests = testHelper.cleanTests;
 var tests = [
   './angularjs/index.test.js',
   './beans/index.test.js',
+  './common/index.test.js',
   './setter-prototype/index.test.js',
   './symfony/index.test.js',
 ];
