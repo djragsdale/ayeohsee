@@ -106,5 +106,3 @@ test('injects nested dependencies', function () {
   var returnedValue = needsService.doStuff();
   assert.equal(returnedValue, testConstant);
 });
-
-// TODO: Test property setting
