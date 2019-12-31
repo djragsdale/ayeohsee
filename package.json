@@ -1,5 +1,5 @@
 {
-  "name": "eyeohsee",
+  "name": "ayeohsee",
   "version": "0.1.0",
   "description": "zero-dependency dependency injection dependency",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/djragsdale/eyeohsee.git"
+    "url": "git+https://github.com/djragsdale/ayeohsee.git"
   },
   "keywords": [
     "di",
@@ -23,7 +23,7 @@
   "author": "David Ragsdale",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/djragsdale/eyeohsee/issues"
+    "url": "https://github.com/djragsdale/ayeohsee/issues"
   },
-  "homepage": "https://github.com/djragsdale/eyeohsee#readme"
+  "homepage": "https://github.com/djragsdale/ayeohsee#readme"
 }

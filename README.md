@@ -1,4 +1,4 @@
-# eyeohsee
+# ayeohsee
 zero-dependency dependency injection dependency
 
 ## Summary
@@ -11,20 +11,20 @@ Use deep imports to only get the code you need.
 
 ```javascript
 // Old school
-var createInjector = require('eyeohsee/setter-prototype').createInjector;
+var createInjector = require('ayeohsee/setter-prototype').createInjector;
 
 // CJS
-const { createInjector } = require('eyeohsee/setter-prototype');
+const { createInjector } = require('ayeohsee/setter-prototype');
 
 // ESM
-import { createInjector } from 'eyeohsee/setter-prototype';
+import { createInjector } from 'ayeohsee/setter-prototype';
 ```
 
 If using as a raw script, make sure to include common first. Injectors that handle instantiation rely on it for supporting browsers without spread syntax.
 
 ```html
-<script src="/assets/vendor/eyeohsee/common/script.js">
-<script src="/assets/vendor/eyeohsee/beans/script.js">
+<script src="/assets/vendor/ayeohsee/common/script.js">
+<script src="/assets/vendor/ayeohsee/beans/script.js">
 ```
 
 ## Container Types
@@ -76,7 +76,7 @@ Cons:
 - Does not make the bean configuration fully serializable (requires prototype passed in)
   - A Node or Browser-module specific method could handle this, but no platform agnostic method
   - ES Module dynamic imports is the most-supported method, but lacks legacy support for older versions of Node and browsers
-  - I plan to add support for serializable bean configuration to the `eyeohsee/beans/module.mjs` entry point
+  - I plan to add support for serializable bean configuration to the `ayeohsee/beans/module.mjs` entry point
 
 ### Symfony
 
