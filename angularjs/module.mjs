@@ -24,3 +24,8 @@ export function getContext(baseContext) {
 
   return context;
 }
+
+export default {
+  angularJsInjector,
+  getContext,
+};

@@ -49,3 +49,6 @@ JsonApplicationContext.prototype.getBean = function getBean(name) {
 };
 
 export { JsonApplicationContext };
+export default {
+  JsonApplicationContext,
+};

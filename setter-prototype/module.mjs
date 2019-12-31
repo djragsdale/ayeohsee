@@ -28,3 +28,7 @@ export function createInjector(dependencies) {
     });
   }
 }
+
+export default {
+  createInjector,
+};
