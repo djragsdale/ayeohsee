@@ -1,3 +1,5 @@
+var applyAndNew = require('../common').applyAndNew;
+
 function ContainerReference(containerName) {
   this.containerName = containerName;
 }

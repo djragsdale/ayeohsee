@@ -10,7 +10,6 @@ function SymfonyContainer(containerBuilder, className, classProto) {
   this.arguments = [];
   this.methodCalls = [];
 }
-
 SymfonyContainer.prototype.addArgument = function addArgument(value) {
   var argument;
   if (

@@ -67,6 +67,7 @@ Pros:
 
 - Handles constructor arguments of other dependencies as well as values
 - Standardizes dependencies in a single location
+- Dependencies don't have to be listed in a special order
 
 Cons:
 
@@ -88,6 +89,8 @@ Cons:
 
 - Just plain complicated
 - Requires manual, programmatic IOC container registration
+- Requires containers to be registered in proper order
+- Requires all proprties of the application context to have prototypes
 
 ## Desired Features
 
