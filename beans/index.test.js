@@ -24,23 +24,17 @@ test('JsonApplicationContext is a function', function() {
 });
 
 function ConstantService(TEST_CONSTANT) {
-  function getConstant() {
-    return TEST_CONSTANT;
-  }
-
-  return {
-    getConstant: getConstant
-  };
+  this.TEST_CONSTANT = TEST_CONSTANT;
 }
+ConstantService.prototype.getConstant = function () {
+  return this.TEST_CONSTANT;
+};
 
 function DataService(constantService) {
-  function getValue() {
-    return constantService.getConstant();
-  }
-
-  return {
-    getValue: getValue
-  };
+  this.constantService = constantService;
+}
+DataService.prototype.getValue = function() {
+  return this.constantService.getConstant();
 }
 
 var testConstant = 'testValue';
