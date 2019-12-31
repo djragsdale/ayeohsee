@@ -3,10 +3,9 @@ var fs = require('fs');
 var test = require('../helpers/test').test;
 
 // NOTE: getContext's baseContext must be properly ordered
-var {
-  angularJsInjector,
-  getContext,
-} = require('./');
+var angularJsLib = require('./');
+var angularJsInjector = angularJsLib.angularJsInjector;
+var getContext = angularJsLib.getContext;
 
 test('CJS module matches the script', function() {
   assert.fail();
