@@ -9,6 +9,17 @@ Don't over-engineer your solution. This package is usable, however it is an exam
 
 Use deep imports to only get the code you need.
 
+```javascript
+// Old school
+var createInjector = require('eyeohsee/setter-prototype').createInjector;
+
+// CJS
+const { createInjector } = require('eyeohsee/setter-prototype');
+
+// ESM
+import { createInjector } from 'eyeohsee/setter-prototype';
+```
+
 ## Desired Features
 
 - Each container type fully tested
