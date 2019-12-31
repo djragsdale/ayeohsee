@@ -7,6 +7,7 @@ function angularJsInjector(dependencies, fn) {
     if (!dependencies[dependencyName]) {
       throw new Error('Dependency "' + dependencyName + '" is not a valid dependency.');
     }
+    // WARNING: this blocks prototypes from being bound correctly
     fn = fn.bind(null, dependencies[dependencyName]);
   }
 
@@ -14,11 +15,11 @@ function angularJsInjector(dependencies, fn) {
   return fn;
 }
 
-function getContext(baseContext, dependencies) {
+function getContext(baseContext) {
   var context = baseContext;
 
   Object.keys(context).forEach(function (key) {
-    context[key] = angularJsInjector(dependencies, context[key]);
+    context[key] = angularJsInjector(context, context[key]);
   });
 
   return context;
