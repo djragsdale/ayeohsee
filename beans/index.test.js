@@ -92,10 +92,11 @@ test('injects nested dependencies', function () {
       }]
     }
   };
-var ctx = new JsonApplicationContext(bean);
+  
+  var ctx = new JsonApplicationContext(bean);
 
-var returnedValue = ctx.getBean('needsService').doStuff();
-assert.equal(returnedValue, testConstant);
+  var returnedValue = ctx.getBean('needsService').doStuff();
+  assert.equal(returnedValue, testConstant);
 });
 
 // TODO: Test property setting
