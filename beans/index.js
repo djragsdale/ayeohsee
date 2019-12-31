@@ -47,5 +47,5 @@ JsonApplicationContext.prototype.getBean = function getBean(name) {
 };
 
 module.exports = {
-  JsonApplicationContext,
+  JsonApplicationContext: JsonApplicationContext
 };

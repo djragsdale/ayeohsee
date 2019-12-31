@@ -23,5 +23,5 @@ function createInjector(dependencies) {
 }
 
 module.exports = {
-  createInjector
+  createInjector: createInjector
 };

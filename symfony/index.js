@@ -83,7 +83,7 @@ ContainerBuilder.prototype.getClass = function getClass(name) {
 };
 
 module.exports = {
-  ContainerReference,
-  SymfonyContainer,
-  ContainerBuilder
+  ContainerReference: ContainerReference,
+  SymfonyContainer: SymfonyContainer,
+  ContainerBuilder: ContainerBuilder
 };

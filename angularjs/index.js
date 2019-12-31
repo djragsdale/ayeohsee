@@ -26,5 +26,5 @@ function getContext(baseContext, dependencies) {
 
 module.exports = {
   angularJsInjector: angularJsInjector,
-  getContext: getContext,
+  getContext: getContext
 };
